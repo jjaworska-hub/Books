@@ -1,0 +1,22 @@
+Nazwa: <input [(ngModel)]="nowyBook.nazwa"><br>
+Liczba stron: <input [(ngModel)]="nowyBook.liczbaStron"><br>
+Autor: <input [(ngModel)]="nowyBook.autor"><br>
+Gatunek: <input [(ngModel)]="nowyBook.gatunek"><br>
+Czy przeczytana?: <input [(ngModel)]="nowyBook.czyPrzeczytane"><br>
+<button (click)="onClick()">Dodaj</button>
+
+<br>
+<div>
+  <ul>
+    <li *ngFor="let book of books">
+      {{book.nazwa}},
+      {{book.autor}},
+      Liczba strona: {{book.liczbaStron}},
+      Gautnek: {{book.gatunek}},
+      Czy przeczytana? {{book.czyPrzeczytane}}
+      <button (click)="remove(book)">Usuń</button>
+    </li>
+  </ul>
+
+
+</div>
